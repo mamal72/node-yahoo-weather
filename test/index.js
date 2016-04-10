@@ -8,7 +8,7 @@ chai.should();
 describe('Node Yahoo Weather Tests', () => {
   let response;
   before(done => {
-    yahooWeather({q: 'mashhad'}).then(res => {
+    yahooWeather('mashhad').then(res => {
       response = res;
       done();
     }).catch(err => {

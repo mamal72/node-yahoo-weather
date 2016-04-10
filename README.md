@@ -1,7 +1,7 @@
 # node-yahoo-weather
-**node-yahoo-weather** is a dead simple node module with **zero** dependencies.
+**node-yahoo-weather** is a dead simple isomorphic JavaScript weather module in 10 lines of code.
 
-The code is written using [ES2015](https://babeljs.io/docs/learn-es2015/) and simply transformed back using [babel](https://babeljs.io) to the `dist` directory.
+The code is written using [ES2015](https://babeljs.io/docs/learn-es2015/) and simply transformed back using [babel](https://babeljs.io) to the `dist` directory using a [Grunt](http://gruntjs.com/) task.
 
 I made this module cause I need it and I feel it may be used by someone, someday. Let's get started! :grin:
 
@@ -15,10 +15,16 @@ npm install yahoo-weather --save
 
 ## Usage
 
-Dead simple, as I said! Check it:
+Dead simple, as I said! Just one required param. Check it:
 ```js
-import weather from 'yahoo-weather';
-weather({ q: 'Tehran' }).then(info => {
+import weather from 'yahoo-weather'; // or require it
+weather('tehran').then(info => {
+  // Do what you want with `info`!
+}).catch(err => {
+  // Oops! Errors! :(
+});
+
+weather('tehran', 'f').then(info => { // second arg is the weather unit. you can pass 'c' or 'f'. defaults to 'c'.
   // Do what you want with `info`!
 }).catch(err => {
   // Oops! Errors! :(
