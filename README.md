@@ -13,6 +13,7 @@ Clone the repo or install it from `npm`:
 npm install yahoo-weather --save
 ```
 
+
 ## Usage
 
 Dead simple, as I said! Just one required param. Check it:
@@ -31,8 +32,11 @@ weather('tehran', 'f').then(info => { // second arg is the weather unit. you can
 });
 ```
 
+
 ## Tests
-Run the tests with following script:
+
+Run the tests with following command:
+
 ```bash
 npm test
 ```
@@ -48,6 +52,7 @@ Just fill an issue and describe it. I'll check it ASAP. :grin:
 You can fork the repository, improve or fix it and then send the pull requests back if you want to see them here. I really appreciate that. :heart:
 
 Remember to lint your code before sending pull requests. Execute the linter script by running the following command and fix the errors if you get any.
+
 ```bash
 npm run lint
 ```
