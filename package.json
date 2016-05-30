@@ -1,11 +1,11 @@
 {
   "name": "yahoo-weather",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A simple yahoo weather API wrapper",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
-    "test": "mocha --compilers js:babel-core/register test/index.js",
+    "test": "npm run build && mocha --compilers js:babel-core/register test/index.js",
     "lint": "eslint src test"
   },
   "files": [

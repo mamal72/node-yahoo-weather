@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 
 import chai from 'chai';
-import yahooWeather from '../';
+import yahooWeather from '../dist';
 
 chai.should();
 
