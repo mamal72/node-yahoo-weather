@@ -5,7 +5,8 @@ import yahooWeather from '../';
 
 chai.should();
 
-describe('Node Yahoo Weather Tests', () => {
+describe('Node Yahoo Weather Tests', function() {
+  this.timeout(5000);
   let response;
   before(done => {
     yahooWeather('mashhad').then(res => {

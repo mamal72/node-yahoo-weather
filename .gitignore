@@ -33,4 +33,7 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
+# Transpiled version
+dist
+
 .DS_Store

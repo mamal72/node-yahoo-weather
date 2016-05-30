@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mamal72/node-yahoo-weather.svg?branch=master)](https://travis-ci.org/mamal72/node-yahoo-weather)
+[![npm version](https://badge.fury.io/js/yahoo-weather.svg)](https://badge.fury.io/js/yahoo-weather)
 # node-yahoo-weather
 **node-yahoo-weather** is a dead simple isomorphic JavaScript weather module in 10 lines of code.
 
@@ -19,6 +21,7 @@ npm install yahoo-weather --save
 Dead simple, as I said! Just one required param. Check it:
 ```js
 import weather from 'yahoo-weather'; // or require it
+
 weather('tehran').then(info => {
   // Do what you want with `info`!
 }).catch(err => {
@@ -30,6 +33,16 @@ weather('tehran', 'f').then(info => { // second arg is the weather unit. you can
 }).catch(err => {
   // Oops! Errors! :(
 });
+
+// or use it with awesome async & await
+async () => {
+  try {
+    const info = await weather('tehran');
+    // Do what you want with `info`!
+  } catch (err) {
+    // Oops! Errors! :(
+  }
+}();
 ```
 
 
