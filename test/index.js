@@ -21,4 +21,18 @@ describe('Node Yahoo Weather Tests', () => {
       response.should.be.an('object');
     });
   });
+
+  describe('# invalid query', () => {
+    let response;
+    before(done => {
+      yahooWeather(null).then(res => {
+        response = res;
+        done();
+      }).catch(err => {
+        throw err;
+      });
+    });
+
+    it('Should return null', () => chai.expect(response).to.be.null);
+  });
 });
