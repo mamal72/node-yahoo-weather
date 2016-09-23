@@ -6,5 +6,5 @@ export default function getWeather(query, unit = 'c') {
       throw new Error('Bad response from server');
     }
     return response.json();
-  }).then(json => json.query.results.channel);
+  }).then(json => json.query.results === null ? null : json.query.results.channel);
 }
