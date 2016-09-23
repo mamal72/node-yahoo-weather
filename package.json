@@ -1,6 +1,6 @@
 {
   "name": "yahoo-weather",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "A simple yahoo weather API wrapper",
   "main": "index.js",
   "scripts": {
